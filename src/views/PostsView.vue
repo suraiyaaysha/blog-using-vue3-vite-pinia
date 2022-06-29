@@ -12,12 +12,16 @@ fetchPosts()
 
 <template>
   <main>
-    <p v-if="loading">Loading posts...</p>
-    <p v-if="error">{{ error.message }}</p>
-    <!-- <p v-if="posts" v-for="post in posts" :key="post.id"> -->
-    <div v-for="post in posts" :key="post.id">
-      <RouterLink :to="`/post/${post.id}`">{{ post.title }}</RouterLink>
-      <p>{{ post.body }}</p>
+    <div class="container">
+      <div class="row">
+        <p v-if="loading">Loading posts...</p>
+        <p v-if="error">{{ error.message }}</p>
+            <!-- <p v-if="posts" v-for="post in posts" :key="post.id"> -->
+            <div class="col-md-6 post-item" v-for="post in posts" :key="post.id">
+              <RouterLink :to="`/post/${post.id}`">{{ post.title }}</RouterLink>
+              <p>{{ post.body }}</p>
+            </div>
+      </div>
     </div>
   </main>
 </template>

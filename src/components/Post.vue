@@ -15,13 +15,13 @@ fetchComments()
 
 <template>
     <div>
-        <div>
+        <div class="post-details-top-part">
             <h2>{{ post.title }}</h2>
             <p v-if="author">Written by: <RouterLink :to="`/author/${author.username}`">{{ author.name }}</RouterLink> | <span>Comments: {{ getPostComments.length }}</span> </p>
             <p>{{ post.body }}</p>
         </div>
         <hr>
-        <div>
+        <div class="post-comment-part">
             <h3>Comments:</h3>
             <comment :comments="getPostComments"></comment>
         </div>
@@ -29,6 +29,11 @@ fetchComments()
     </div>
 </template>
 
-<style lang="scss" scoped>
-
+<style scoped>
+.post-details-top-part {
+    margin-bottom: 20px;
+}
+.post-comment-part {
+    margin-top: 20px;
+}
 </style>

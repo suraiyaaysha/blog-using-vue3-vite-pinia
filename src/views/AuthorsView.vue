@@ -11,11 +11,19 @@
 </script>
 
 <template>
-  <div class="about">
-      <!-- <p v-if="authors" v-for="author in authors" :key="author.id"> -->
-      <p v-for="author in authors" :key="author.id">
-          <RouterLink :to="`/author/${author.username}`">{{ author.name }}</RouterLink>
-      </p>
+  <div class="author-page">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+              <ul>
+                <!-- <p v-if="authors" v-for="author in authors" :key="author.id"> -->
+                <li v-for="author in authors" :key="author.id">
+                  <RouterLink :to="`/author/${author.username}`">{{ author.name }}</RouterLink>
+                </li>
+            </ul>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 

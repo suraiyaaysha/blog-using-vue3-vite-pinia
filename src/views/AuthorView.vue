@@ -20,12 +20,16 @@
 </script>
 
 <template>
-  <div>
-    <author
-    :author="getAuthorByUserName"
-    :posts="getPostsPerAuthor(getAuthorByUserName.id)">
-    </author>
-  </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <author
+          :author="getAuthorByUserName"
+          :posts="getPostsPerAuthor(getAuthorByUserName.id)">
+          </author>
+        </div>
+      </div>
+    </div>
 </template>
 
 <style>

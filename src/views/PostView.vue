@@ -19,11 +19,17 @@ fetchPost(route.params.id)
 
 <template>
     <div>
-        <p v-if="loading">Loading...</p>
-        <p v-if="error">{{ error.message }}</p>
-        <p v-if="post">
-            <post :post="post" :author="getPostAuthor"></post>
-        </p>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <p v-if="loading">Loading...</p>
+                    <p v-if="error">{{ error.message }}</p>
+                    <div v-if="post">
+                        <post :post="post" :author="getPostAuthor"></post>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </template>
 

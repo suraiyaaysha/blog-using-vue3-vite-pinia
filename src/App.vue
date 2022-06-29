@@ -31,7 +31,7 @@ import { RouterLink, RouterView } from 'vue-router'
 </template>
 
 <style>
-/* @import '@/assets/base.css'; */
+@import '@/assets/base.css';
 
 .navbar {
   background-color: lightgreen;
@@ -132,4 +132,45 @@ nav a:first-of-type {
     margin-top: 1rem;
   }
 } */
+header.navbar a {
+    padding: 10px;
+    font-weight: 700;
+    font-size: 18px;
+}
+.row {
+    display: flex;
+    max-width: 1200px;
+    margin: 25px auto;
+    flex-wrap: wrap;
+}
+.post-item {
+    border: 1px solid #f1f1f1;
+    /* margin-bottom: 20px; */
+    padding: 30px;
+    width: 25%;
+    padding: 15px;
+    margin: 15px;
+}
+.post-item a {
+    font-size: 18px;
+    font-weight: 500;
+    color: green;
+}
+ul li {
+    padding: 10px 0;
+    color: green;
+    font-weight: 500;
+}
+ul li a {
+    font-size: 18px;
+    font-weight: 500;
+    color: green;
+}
+h1,h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  text-transform: capitalize;
+}
+h2 {
+  font-size: 32px;
+}
 </style>
