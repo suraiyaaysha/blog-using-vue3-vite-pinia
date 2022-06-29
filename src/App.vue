@@ -31,7 +31,7 @@ import { RouterLink, RouterView } from 'vue-router'
 </template>
 
 <style>
-@import '@/assets/base.css';
+/* @import '@/assets/base.css'; */
 
 .navbar {
   background-color: lightgreen;

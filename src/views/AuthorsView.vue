@@ -13,7 +13,7 @@
 <template>
   <div class="about">
       <!-- <p v-if="authors" v-for="author in authors" :key="author.id"> -->
-      <p v-if="authors" v-for="author in authors" :key="author.id">
+      <p v-for="author in authors" :key="author.id">
           <RouterLink :to="`/author/${author.username}`">{{ author.name }}</RouterLink>
       </p>
   </div>

@@ -15,7 +15,7 @@ export const useCommentStore = defineStore({
     actions: {
         async fetchComments() {
             this.comments = await fetch('https://jsonplaceholder.typicode.com/comments')
-            .then((response) => response.json)
+            .then((response) => response.json())
         }
     }
 })

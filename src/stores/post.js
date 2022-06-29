@@ -9,7 +9,7 @@ export const usePostStore = defineStore({
     error: null
   }),
   getters: {
-    getPostsAuthor: (state) => {
+    getPostsPerAuthor: (state) => {
       return (authorId) => state.posts.filter((post) => post.userId === authorId)
     }
   },
