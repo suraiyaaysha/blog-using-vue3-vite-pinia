@@ -18,8 +18,8 @@ export const usePostStore = defineStore({
       this.posts = []
       this.loading = true
       try {
-        // this.posts = await fetch('https://jsonplaceholder.typicode.com/posts')
-        this.posts = await fetch('https://mockend.com/mockend/demo/posts')
+        this.posts = await fetch('https://jsonplaceholder.typicode.com/posts')
+        // this.posts = await fetch('https://mockend.com/mockend/demo/posts')
         .then((response) => response.json())
       } catch (error) {
         this.error = error
@@ -32,7 +32,7 @@ export const usePostStore = defineStore({
       this.post = null
       this.loading = true
       try {
-        this.post = await fetch(`https://mockend.com/mockend/demo/posts/${id}`)
+        this.post = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`)
         .then((response) => response.json())
       } catch (error) {
         this.error = error

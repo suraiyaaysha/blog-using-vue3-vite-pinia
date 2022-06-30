@@ -12,11 +12,6 @@ defineProps(['author', 'posts'])
         <div class="all-posts-of-a-author mt-4 mb-3">
             <h5>All Posts from {{ author.name }}</h5>
         </div>
-        <!-- <ul>
-            <li v-for="post in posts" :key="post.id">
-                <RouterLink :to="`/post/${post.id}`">{{ post.title }}</RouterLink>
-            </li>
-        </ul> -->
         <div class="" v-for="post in posts" :key="post.id">
             <div class="card post-item">
               <div class="card-body">

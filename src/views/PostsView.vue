@@ -24,10 +24,10 @@ fetchPosts()
 
           <div class="col-lg-3" v-for="post in posts" :key="post.id">
             <div class="card post-item">
-              <img src="..." class="card-img-top" alt="...">
+              <!-- <img src="..." class="card-img-top" alt="..."> -->
               <div class="card-body">
-                <RouterLink :to="`/post/${post.id}`" class="card-title h5">{{ post.title }}</RouterLink>
-                <p class="card-text">{{ post.body }}</p>
+                <RouterLink :to="`/post/${post.id}`" class="card-title h5">{{ post.title.slice(0, 20) }}...</RouterLink>
+                <p class="card-text">{{ post.body.slice(0, 60) }}...</p>
                 <RouterLink :to="`/post/${post.id}`" class="btn btn-primary">See Details</RouterLink>
               </div>
             </div>
