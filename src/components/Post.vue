@@ -17,7 +17,7 @@ fetchComments()
     <div>
         <div class="post-details-top-part">
             <h2>{{ post.title }}</h2>
-            <p v-if="author">Written by: <RouterLink :to="`/author/${author.username}`">{{ author.name }}</RouterLink> | <span>Comments: {{ getPostComments.length }}</span> </p>
+            <p v-if="author">Written by: <RouterLink :to="`/author/${author.username}`" class="fw-semibold">{{ author.name }}</RouterLink> | <span>Comments: {{ getPostComments.length }}</span> </p>
             <p>{{ post.body }}</p>
         </div>
         <hr>

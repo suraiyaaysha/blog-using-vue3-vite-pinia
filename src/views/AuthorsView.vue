@@ -11,17 +11,25 @@
 </script>
 
 <template>
-  <div class="author-page">
+  <div class="author-page my-5">
     <div class="container">
       <div class="row">
         <div class="col-12">
-              <ul>
-                <!-- <p v-if="authors" v-for="author in authors" :key="author.id"> -->
-                <li v-for="author in authors" :key="author.id">
-                  <RouterLink :to="`/author/${author.username}`">{{ author.name }}</RouterLink>
-                </li>
-            </ul>
+          <h3 class="mb-4">All Author</h3>
         </div>
+        <!-- <p v-if="authors" v-for="author in authors" :key="author.id"> -->
+          
+        <div class="col-lg-6" v-for="author in authors" :key="author.id">
+          <div class="card author-item">
+            <div class="card-body">
+              <h5 class="card-title">{{ author.name }}</h5>
+              <p class="mb-2 text-muted">Email: {{author.email}}</p>
+              <p class="text-muted"> <span class="">Address:</span> {{author.address.suite}},{{author.address.street}},{{author.address.street}}</p>
+              <RouterLink :to="`/author/${author.username}`" class="btn btn-primary">Author Details</RouterLink>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   </div>

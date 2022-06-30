@@ -18,7 +18,7 @@ fetchPost(route.params.id)
 </script>
 
 <template>
-    <div>
+    <div class="single-post-page my-5">
         <div class="container">
             <div class="row">
                 <div class="col-12">

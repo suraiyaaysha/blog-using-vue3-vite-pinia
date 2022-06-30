@@ -12,15 +12,27 @@ fetchPosts()
 
 <template>
   <main>
-    <div class="container">
-      <div class="row">
-        <p v-if="loading">Loading posts...</p>
-        <p v-if="error">{{ error.message }}</p>
-            <!-- <p v-if="posts" v-for="post in posts" :key="post.id"> -->
-            <div class="col-md-6 post-item" v-for="post in posts" :key="post.id">
-              <RouterLink :to="`/post/${post.id}`">{{ post.title }}</RouterLink>
-              <p>{{ post.body }}</p>
+    <div class="posts-area my-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <h3 class="mb-4">All Posts</h3>
+          </div>
+          <p v-if="loading">Loading posts...</p>
+          <p v-if="error">{{ error.message }}</p>
+              <!-- <p v-if="posts" v-for="post in posts" :key="post.id"> -->
+
+          <div class="col-lg-3" v-for="post in posts" :key="post.id">
+            <div class="card post-item">
+              <img src="..." class="card-img-top" alt="...">
+              <div class="card-body">
+                <RouterLink :to="`/post/${post.id}`" class="card-title h5">{{ post.title }}</RouterLink>
+                <p class="card-text">{{ post.body }}</p>
+                <RouterLink :to="`/post/${post.id}`" class="btn btn-primary">See Details</RouterLink>
+              </div>
             </div>
+          </div>
+        </div>
       </div>
     </div>
   </main>
